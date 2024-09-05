@@ -22,6 +22,9 @@
                 <li class="nav-item gallery">
                     <a class="nav-link" href="list">Gallery</a>
                 </li>
+                <li class="nav-item project">
+                    <a class="nav-link" href="project">Project</a>
+                </li>
                 <li class="nav-item about-me">
                     <a class="nav-link" href="about">About Me</a>
                 </li>
