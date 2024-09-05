@@ -154,3 +154,16 @@ html, body {
     transform: translateX(-50%);
     z-index: 1000; /* 他の要素より前面に表示 */
 }
+
+.icon-container {
+    display: flex;
+    justify-content: center; /* 水平方向の中央配置 */
+    align-items: center;      /* 垂直方向の中央配置 */
+    height: auto;             /* コンテナの高さをアイコンの高さに合わせる */
+    margin: 20px 0;           /* 上下のマージンを調整して、アイコンと見出しの間隔を制御 */
+}
+
+.icon {
+    font-size: 80px; /* アイコンサイズを指定 */
+    color: #000;      /* アイコンの色を指定（必要に応じて変更） */
+}
