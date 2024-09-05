@@ -29,8 +29,8 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-</head>     
-<body>  
+</head> 
+<body>
     <?php include 'navbar.php'; ?>
     <div class="container mt-5">
         <h1 class="text-center">Gallery</h1>
@@ -75,7 +75,7 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             var modal = $(this);
             modal.find('#modalImage').attr('src', photo);
             modal.find('#modalDescription').text(description);
-            modal.find('#modalCreated').text('Taken on: ' + created);
+            modal.find('#modalCreated').text('Added on: ' + created);
         });
     </script>
 </body>

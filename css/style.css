@@ -34,8 +34,9 @@ h1 {
 }
 
 .photo-item img {
-    max-width: 100%;
-    height: auto;
+    width: auto; 
+    height: 150px; 
+    object-fit: cover;
     cursor: pointer;
 }
 
