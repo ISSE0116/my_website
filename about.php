@@ -34,7 +34,8 @@
 
             <!-- 名前と所属 -->
             <h2><strong style="font-size: 1.5em; color: #2c3e50;">Issei Kikuchi</strong></h2>
-            <h4>Graduate Student</h4>
+            <p><strong>Date of Birth:</strong> January 16, 2001</p>
+            <p>Graduate Student</p>
 
             <!-- 趣味 -->
             <h4>Hobbies</h4>
