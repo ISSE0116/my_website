@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -83,6 +85,7 @@ h1 {
     font-weight: bold;
     transition: 0.3s;
 }
+
 .close:hover,
 .close:focus {
     color: #bbb;
@@ -145,35 +148,35 @@ html, body {
 
 .camera-icon-container {
     position: absolute;
-    top: 10px; /* 上からの位置 */
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000; /* 他の要素より前面に表示 */
+    z-index: 1000;
 }
 
 .icon-container {
     display: flex;
-    justify-content: center; /* 水平方向の中央配置 */
-    align-items: center;      /* 垂直方向の中央配置 */
-    height: auto;             /* コンテナの高さをアイコンの高さに合わせる */
-    margin: 20px 0;           /* 上下のマージンを調整して、アイコンと見出しの間隔を制御 */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 20px 0;
 }
 
 .icon {
-    font-size: 80px; /* アイコンサイズを指定 */
-    color: #000;      /* アイコンの色を指定（必要に応じて変更） */
+    font-size: 80px;
+    color: #000;
 }
 
 /* ハンバーガーアイコンのスタイル */
 .navbar-toggler {
-    border: none; /* ボタンの枠線を削除 */
-    outline: none; /* ボタンのフォーカス時のアウトラインを削除 */
-    box-shadow: none; /* ボタンの影を削除 */
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .navbar-toggler:focus {
-    outline: none; /* ボタンがフォーカスされた時のアウトラインを削除 */
-    box-shadow: none; /* フォーカス時の影を削除 */
+    outline: none;
+    box-shadow: none;
 }
 
 .navbar-toggler-icon {
@@ -224,7 +227,68 @@ html, body {
     background-color: #808000 !important;
 }
 
-/* ナビゲーションリンクのテキストカラーを設定*/
+/* ナビゲーションリンクのテキストカラーを設定 */
 .navbar .nav-link {
-    color: #F5F5DC !important; 
+    color: #F5F5DC !important;
+}
+
+/* プロフィールページのスタイル */
+.centered-content {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.profile-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ccc;
+    background-image: url('images/default-profile.png'); /* プロフィール写真がない場合のデフォルト画像 */
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
+
+h2, h4 {
+    color: #2c3e50;
+}
+
+ul.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+ul.list-inline li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1em;
+}
+
+ul.list-inline li a {
+    color: #333;
+}
+
+ul.list-inline li a:hover {
+    color: #555;
+}
+
+.indented-list {
+    list-style: none;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.indented-list li {
+    position: relative;
+    padding-left: 20px;
+    text-indent: -20px;
 }

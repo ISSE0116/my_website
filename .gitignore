@@ -6,3 +6,4 @@ db_connect.php
 composer.json
 composer.lock
 composer.phar
+/images/
