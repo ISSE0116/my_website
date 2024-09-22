@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -34,16 +33,14 @@ h1 {
 }
 
 .photo-item img {
-    width: auto; 
-    height: 150px; 
+    width: auto;
+    height: 150px;
     object-fit: cover;
     cursor: pointer;
 }
 
 .photo-item p {
     margin-top: 10px;
-    font-size: 14px;
-    color: #555;
 }
 
 .popup {
@@ -86,7 +83,6 @@ h1 {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .close:hover,
 .close:focus {
     color: #bbb;
@@ -166,4 +162,69 @@ html, body {
 .icon {
     font-size: 80px; /* アイコンサイズを指定 */
     color: #000;      /* アイコンの色を指定（必要に応じて変更） */
+}
+
+/* ハンバーガーアイコンのスタイル */
+.navbar-toggler {
+    border: none; /* ボタンの枠線を削除 */
+    outline: none; /* ボタンのフォーカス時のアウトラインを削除 */
+    box-shadow: none; /* ボタンの影を削除 */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* ボタンがフォーカスされた時のアウトラインを削除 */
+    box-shadow: none; /* フォーカス時の影を削除 */
+}
+
+.navbar-toggler-icon {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler-icon::before {
+    top: -10px;
+}
+
+.navbar-toggler-icon::after {
+    top: 10px;
+}
+
+.navbar-toggler.toggler-open .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler.toggler-open .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navbar-toggler.toggler-open .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* ヘッダーの背景色を設定 */
+.navbar {
+    background-color: #808000 !important;
+}
+
+/* ナビゲーションリンクのテキストカラーを設定*/
+.navbar .nav-link {
+    color: #F5F5DC !important; 
 }

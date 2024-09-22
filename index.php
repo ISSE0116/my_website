@@ -49,6 +49,10 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 disableDefaultUI: true
             });
 
+            const infowindow = new google.maps.InfoWindow({
+                maxWidth: 300 // ポップアップの最大幅を設定
+            });
+
             const photos = <?php echo json_encode($photos); ?>;
             photos.forEach(photo => {
                 const marker = new google.maps.marker.AdvancedMarkerElement({
@@ -57,11 +61,13 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     title: photo.description
                 });
 
-                const infowindow = new google.maps.InfoWindow({
-                    content: `<div class="infowindow-content"><img src="${photo.path}" alt="photo"></div>`
-                });
-
                 marker.addListener('click', () => {
+                    // ポップアップの内容を画像のみ表示し、エッジを狭めるスタイルを適用
+                    infowindow.setContent(`
+                        <div class="infowindow-content" style="padding: 0; border-radius: 5px; overflow: hidden;">
+                            <img src="${photo.path}" alt="photo" style="width: 100%; height: auto; border-radius: 5px;">
+                        </div>
+                    `);
                     infowindow.open(map, marker);
                 });
             });

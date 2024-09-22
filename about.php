@@ -19,36 +19,27 @@
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome CSS -->
 </head>
 <body>
-    <div id="navbar"></div>
-    <script>
-      fetch('navbar.php')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar').innerHTML = data;
-        });
-    </script>
+    <?php include 'navbar.php'; ?>
 
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-8">
                 <h2><strong style="font-size: 1em; color: #2c3e50;">Issei Kikuchi</strong></h2>
 
-                
                 <h4>Affiliation</h4>
                 <p>graduate student</p>
-
+                <!--
                 <h4>Research Topic</h4>
                 <p>The Development of an Exercise Support System Using Spatial Audio</p>
-                
+                -->
                 <h4>Hobbies</h4>
                 <ul class="indented-list">
                     <li>cycling</li>
                     <li>photography</li>
                 </ul>
-                
+
                 <h4>Contact</h4>
                 <ul>
                     <li>Email: <a href="mailto:yukizaru.2587@icloud.com">yukizaru.2587@icloud.com</a></li>
@@ -62,10 +53,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

@@ -27,12 +27,10 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Photo Gallery</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head> 
 <body>
     <?php include 'navbar.php'; ?>
-    <div class="container mt-5">
+    <div class="container-fluid mt-4 p-0">
         <h1 class="text-center">Gallery</h1>
         <div class="photo-grid">
             <?php foreach ($photos as $photo): ?>
@@ -61,10 +59,6 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         $('#photoModal').on('show.bs.modal', function (event) {
