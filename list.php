@@ -14,6 +14,7 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHG2R409ND"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}

@@ -29,7 +29,7 @@
         <div class="text-center">
             <!-- プロフィール写真 -->
             <div class="profile-photo mb-4">
-                <img src="./images/con.jpg" alt="Profile Photo" class="rounded-circle">
+                <img src="./images/icon.jpg" alt="Profile Photo" class="rounded-circle">
             </div>
 
             <!-- 名前と所属 -->

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -16,7 +17,7 @@ $stmt->execute();
 $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
@@ -34,7 +35,7 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Map View</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> 
-</head>
+<o/head>
 <body>
     <?php include 'navbar.php'; ?>
     <div class="container-fluid mt-4 p-0">
@@ -53,6 +54,7 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 maxWidth: 300 // ポップアップの最大幅を設定
             });
 
+            
             const photos = <?php echo json_encode($photos); ?>;
             photos.forEach(photo => {
                 const marker = new google.maps.marker.AdvancedMarkerElement({
@@ -76,3 +78,4 @@ $photos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $googleMapsApiKey; ?>&callback=initMap&libraries=marker&v=weekly" async defer></script>
 </body>
 </html>
+
