@@ -1,0 +1,10 @@
+.env
+vendor/
+certs/
+uploads/
+*.phar
+*.rpm
+.DS_Store
+setup_azure_vm.sh
+lb37c_travel_map_azure.sql
+lb37c_travel_map.sql

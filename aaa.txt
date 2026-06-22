@@ -1,0 +1,24 @@
+# 1. Nginxを停止・無効化
+sudo systemctl stop nginx
+sudo systemctl disable nginx
+
+# 2. Apacheをインストール・起動
+sudo apt update
+sudo apt install apache2 -y
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+# 3. PHPと必要なモジュールをインストール
+sudo apt install php libapache2-mod-php php-mysql php-mbstring -y
+
+# 4. mod_rewriteを有効化（.htaccessのURLリライトに必要）
+sudo a2enmod rewrite
+
+# 5. .htaccessを有効にするため、Apache設定を変更
+# /etc/apache2/sites-available/000-default.conf に以下を追記：
+#   <Directory /var/www/html>
+#       AllowOverride All
+#   </Directory>
+
+# 6. Apacheを再起動
+sudo systemctl restart apache2
