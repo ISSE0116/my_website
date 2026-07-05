@@ -18,8 +18,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Generate a unique file name to avoid overwriting existing files
         $file_name = uniqid() . '_' . basename($_FILES['file']['name']);
         $description = $_POST['description'];
-        $latitude = $_POST['latitude'];
-        $longitude = $_POST['longitude'];
+        
+        // Helper function to convert DMS format (e.g. 37°34'39.5"N) to Decimal Degrees
+        if (!function_exists('convertCoordinate')) {
+            function convertCoordinate($coord) {
+                if (is_numeric($coord)) return (float)$coord;
+                $coord = preg_replace('/\s+/', '', $coord);
+                $coord = str_replace(['’', '”', '′', '″'], ["'", '"', "'", '"'], $coord);
+                if (preg_match('/^(\d+)°(\d+)\'([\d\.]+)"([NSWEnswe])$/u', $coord, $m)) {
+                    $dec = $m[1] + ($m[2] / 60) + ($m[3] / 3600);
+                    if (strtoupper($m[4]) === 'S' || strtoupper($m[4]) === 'W') $dec *= -1;
+                    return $dec;
+                }
+                return $coord;
+            }
+        }
+
+        $latitude = convertCoordinate($_POST['latitude']);
+        $longitude = convertCoordinate($_POST['longitude']);
         
         // Set the target directory for uploaded files
         $file_path = 'uploads/' . $file_name;

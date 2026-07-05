@@ -5,6 +5,8 @@
 ErrorDocument 401 /error/401.html
 
 RewriteEngine on
+# Blog article URL rewrite
+RewriteRule ^article/([a-zA-Z0-9_-]+)$ article.php?slug=$1 [L]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f

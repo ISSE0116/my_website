@@ -34,7 +34,7 @@
 
             <!-- 名前と所属 -->
             <h2>Issei Kikuchi</h2>
-            <p class="text-muted" style="color: var(--text-muted);">January 16, 2001 &bull; Graduate Student</p>
+            <p class="text-muted" style="color: var(--text-muted);">January 16, 2001 </p>
 
             <hr class="my-4" style="border-top: 1px solid var(--border);">
 
@@ -53,6 +53,7 @@
                 <span class="pill-badge">JavaScript</span>
                 <span class="pill-badge">HTML/CSS</span>
                 <span class="pill-badge">AWS</span>
+                <span class="pill-badge">Azure</span>
                 <span class="pill-badge">Flask</span>
                 <span class="pill-badge">React</span>
                 <span class="pill-badge">PyTorch</span>

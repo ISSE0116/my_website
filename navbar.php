@@ -7,8 +7,8 @@
 <!-- Bootstrap JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="index.php">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.php" style="margin-top: 5px;">
         <i class="fas fa-camera-retro fa-2x"></i>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,15 +22,15 @@
             <li class="nav-item gallery">
                 <a class="nav-link" href="list">Gallery</a>
             </li>
-            <li class="nav-item project">
-                <a class="nav-link" href="project">Project</a>
+            <li class="nav-item blog">
+                <a class="nav-link" href="project">Blog</a>
             </li>
             <li class="nav-item about-me">
                 <a class="nav-link" href="about">About Me</a>
             </li>
-            <li class="nav-item admin ml-lg-3">
+            <li class="nav-item admin">
                 <a class="nav-link" href="login">
-                    <i class="fas fa-key"></i>
+                    <i class="fas fa-key "></i>
                 </a>
             </li>
         </ul>
